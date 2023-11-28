@@ -12,14 +12,8 @@
 IntroToApp();
 var guestBook = new GuestBook();
 ListGuests(guestBook.Book);
+OutroToApp();
 
-void ListGuests(List<Guest> Book)
-{
-    foreach(Guest guest in Book)
-    {
-        Console.WriteLine($"Party: {guest.partyName} Number in Party: {guest.partySize}");
-    }
-}
 
 void IntroToApp()
 {
@@ -30,11 +24,19 @@ void IntroToApp()
     Console.WriteLine("Welcome to the 'Guest List' application!");
     Console.WriteLine();
 }
+void ListGuests(List<Guest> Book)
+{
+    foreach(Guest guest in Book)
+    {
+        Console.WriteLine($"Party: {guest.partyName} Number in Party: {guest.partySize}");
+    }
+}
 
 void OutroToApp()
 {
     Console.WriteLine();
     Console.WriteLine("Thanks for using the 'Guest List' application!");
+    Console.ReadLine();
 }
 
 
